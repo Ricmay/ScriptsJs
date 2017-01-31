@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<title>AngularJS Routing</title>
+<link rel="stylesheet" href="css/app.css"/>
+</head>
+<body>
+<ul class="menu">
+<li><a href="#/view1">view1</a></li>
+<li><a href="#/view2">view2</a></li>
+</ul>
+<p>
+First name: <input type="text" ng-model="firstname"/> <br/>
+Last name: <input type="text" ng-model="lastname"/> <br/>
+<button ng-click="loadView2()">Load View2</button>
+</p>
+<p>
+From View2.
+<ul>
+<li>First name: {{firstname}}</li>
+<li>Last name: {{lastname}}</li>
+</ul>
+</p>
+<ng-view></ng-view>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+<script src="angularroute.js"></script>
+<script src="app.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>
